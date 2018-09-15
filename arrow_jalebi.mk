@@ -15,14 +15,13 @@
 
 $(call inherit-product, device/yu/jalebi/full_jalebi.mk)
 
+# Inherit some common ArrowOS stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
+
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-# Inherit common Android Go configurations
-#$(call inherit-product, build/target/product/go_defaults.mk)
-#IS_GO_VERSION := true
-
-PRODUCT_NAME := aosp_jalebi
+PRODUCT_NAME := arrow_jalebi
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := jalebi
 
@@ -35,7 +34,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=YUNIQUE
 
 BUILD_FINGERPRINT := YU/YU4711/YU4711:5.1.1/LMY47V/1450865915:user/release-keys
-
-# Boot Animation
-PRODUCT_COPY_FILES += \
-    device/yu/jalebi/prebuilt/bootanimation.zip:system/media/bootanimation.zip

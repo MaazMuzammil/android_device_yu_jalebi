@@ -15,5 +15,5 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/full_jalebi.mk \
-    $(LOCAL_DIR)/aosp_jalebi.mk
+    $(LOCAL_DIR)/arrow_jalebi.mk
 
