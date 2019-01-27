@@ -14,6 +14,5 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_jalebi.mk \
-    $(LOCAL_DIR)/arrow_jalebi.mk
+    $(LOCAL_DIR)/lineage_jalebi.mk
 
