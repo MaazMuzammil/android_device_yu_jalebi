@@ -16,12 +16,12 @@
 $(call inherit-product, device/yu/jalebi/full_jalebi.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := lineage_jalebi
+PRODUCT_NAME := aosp_jalebi
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := jalebi
 
@@ -30,6 +30,12 @@ PRODUCT_GMS_CLIENTID_BASE := android-micromax
 TARGET_VENDOR_PRODUCT_NAME := YUNIQUE
 TARGET_VENDOR_DEVICE_NAME := YUNIQUE
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=YUNIQUE PRODUCT_NAME=YUNIQUE
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 720
+
+# Gapps
+TARGET_GAPPS_ARCH := arm
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
